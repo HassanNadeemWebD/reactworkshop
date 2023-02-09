@@ -2,7 +2,7 @@ import React from 'react'
 
 
 
-function Navbar() {
+function Navbar(props) {
     return (
      <>
      <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -17,7 +17,7 @@ function Navbar() {
           <a className="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">Link</a>
+          <a className="nav-link" href="#">{props.link}</a>
         </li>
         <li className="nav-item dropdown">
           <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
