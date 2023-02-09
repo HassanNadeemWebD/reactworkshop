@@ -4,20 +4,21 @@ import { useState } from 'react';
 
 
 function Form() {
-    const [name, setName] = useState("");
+    const [name, setName] = useState("Enter Your Name");
+    const [count, setCount] = useState(0);
     const changeHandler = (e) => {
 
-    //    console.log(e.target.value);
-       setName(e.target.value)
+        //    console.log(e.target.value);
+        setName(e.target.value)
 
-
+setCount(e.target.value.length)
 
     }
 
 
     return (
 
-        
+
         <div className='container'><div className="input-group mb-3 mt-5">
             <span className="input-group-text" id="basic-addon1">@</span>
             <input type="text" className="form-control" placeholder="Username" aria-label="Username" value={name} onChange={changeHandler} aria-describedby="basic-addon1" />
@@ -42,10 +43,10 @@ function Form() {
                 <span className="input-group-text">With textarea</span>
                 <textarea className="form-control" aria-label="With textarea" value={name}></textarea>
             </div>
-            
-            
+
+            <h1>{count}</h1>
             <p>{name} </p>
-            </div>
+        </div>
     )
 }
 
