@@ -9,7 +9,7 @@ const App = () => {
 
   return (
     <>
-      <Navbar link="About" />
+      {/* <Navbar name = "About" /> */}
       <Form/>
 
       <div className='row'>
